@@ -13,7 +13,7 @@ class DataClass
         std::vector<long> return_pulses();
         void remove_sent_pulses();
         int items = 0;
-        char* return_post_payload();
+        std::string return_post_payload();
         
         
 

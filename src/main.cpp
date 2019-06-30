@@ -26,8 +26,7 @@ void post_data(void * pvParameters)
   {
     http.begin(POST_URL);
     http.addHeader("Content-Type", "text/plain");
-    Serial.println(data.return_post_payload());
-    int httpResponseCode=http.POST(data.return_post_payload());
+    int httpResponseCode=http.POST(data.return_post_payload().c_str());
     if (httpResponseCode == 200)
     {
       Serial.print("success: sent ");
@@ -36,7 +35,9 @@ void post_data(void * pvParameters)
     }
     else
     {
-      Serial.print("failed to send items: ");
+      Serial.print("failed to send items error code: ");
+      Serial.print(httpResponseCode);
+      Serial.print(" Items: ");
       Serial.println(data.items+1);
     }
   }

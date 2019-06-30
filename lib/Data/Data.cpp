@@ -40,7 +40,7 @@ std::vector<long> DataClass::return_pulses()
 std::vector<long> get_data_snapshot()
 {
 }
-char* DataClass::return_post_payload()
+std::string DataClass::return_post_payload()
 {
     // Constructs an infuxdb post request to send data.
     std::string payload;
@@ -81,9 +81,7 @@ char* DataClass::return_post_payload()
         ss_timestamp << last_timestamp;
         payload = payload + payload_preamble + ss_count.str() + " " + ss_timestamp.str() + " ";
     }
-    char * payload_cstring = new char [payload.length()+1];
-    std::strcpy(payload_cstring,payload.c_str());
-    return payload_cstring;
+     return payload;
 }
 
 
