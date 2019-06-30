@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/SrzStephen/PowerLogger.svg?branch=master)](https://travis-ci.com/SrzStephen/PowerLogger)
 # PowerLogger
 ![Energy Meter Picture](docs/pics/meter.png)
 
