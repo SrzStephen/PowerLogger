@@ -11,4 +11,6 @@ install:
     - platformio update
 
 script:
+  # Install EasyNTPClient (Library ID 1734)
+    - platformio lib -g install 1734
     - platformio run
